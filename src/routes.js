@@ -8,7 +8,7 @@ import AuthorizedRoute from "./routes/AuthorizedRoute"
 import UnAuthorizedRoute from "./routes/UnauthorizedRoute"
 
 // Components
-import Auth from "./pages/auth"
+import Login from "./pages/login"
 import Dashboard from "./pages/dashboard"
 
 class PublicRoute extends React.Component {
@@ -22,7 +22,7 @@ class PublicRoute extends React.Component {
         <AuthorizedRoute exact path="/home" component={Dashboard} />
 
         <AuthorizedRoute exact path="/" component={Dashboard} />
-        <UnAuthorizedRoute exact path="/login" component={Auth} />
+        <UnAuthorizedRoute exact path="/login" component={Login} />
       </Router>
     )
   }

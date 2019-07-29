@@ -2,6 +2,8 @@ import React from "react"
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider"
 import { Provider } from "react-redux"
 
+import "./App.scss"
+
 // Redux
 import { store, history } from "./services/redux/store"
 

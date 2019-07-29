@@ -1,24 +1,13 @@
 import React from "react"
 import { connect } from "react-redux"
-import RaisedButton from "material-ui/RaisedButton"
-import TextField from "material-ui/TextField"
 import { LoginUser } from "../../../services/redux/middleware"
 
-const mapStateToProps = state => {
-  return {
-    authReducer: state
-  }
-}
+// Styles
+import { Button, Form, FormGroup, Input } from "reactstrap"
+// import classnames from "classnames"
+// import styles from "./SignIn.module.scss"
 
-const mapDispatchToProps = dispatch => {
-  return {
-    signIn: data => {
-      dispatch(LoginUser(data))
-    }
-  }
-}
-
-class SignInComponent extends React.Component {
+class SignIn extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -51,38 +40,45 @@ class SignInComponent extends React.Component {
   render() {
     return (
       <div>
-        <center>
-          <h1>SignIn</h1>
-          <form onSubmit={this.submit}>
-            <TextField
+        <Form onSubmit={this.submit}>
+          <FormGroup>
+            <Input
               type="email"
-              hintText="email"
               name="email"
+              id="email"
+              placeholder="Username"
               value={this.state.email}
-              floatingLabelText="Email"
               onChange={this.inputChange}
             />
-            <br />
-            <TextField
+          </FormGroup>
+          <FormGroup>
+            <Input
               type="password"
-              hintText="Password"
               name="password"
+              id="password"
+              placeholder="Password"
               value={this.state.password}
-              floatingLabelText="Password"
               onChange={this.inputChange}
             />
-            <br />
-            <br />
-            <RaisedButton type="submit" label="SignIn" primary={true} /> <br />
-            <br />
-          </form>
-        </center>
+          </FormGroup>
+          <Button type="submit" label="SignIn" color="primary">
+            Login
+          </Button>
+        </Form>
       </div>
     )
   }
 }
 
+const mapStateToProps = state => ({})
+
+const mapDispatchToProps = dispatch => ({
+  signIn: data => {
+    dispatch(LoginUser(data))
+  }
+})
+
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(SignInComponent)
+)(SignIn)
