@@ -1,0 +1,19 @@
+/* Login Screen*/
+.loginscreen {
+  &.middlebox {
+    width: 300px;
+  }
+}
+
+.middlebox {
+  max-width: 400px;
+  z-index: 100;
+  margin: 0 auto;
+  padding-top: 40px;
+}
+
+.wrapper {
+  .middle-box {
+    margin-top: 140px;
+  }
+}
