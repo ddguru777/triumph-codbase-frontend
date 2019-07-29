@@ -9,7 +9,7 @@ import UnAuthorizedRoute from "./routes/UnauthorizedRoute"
 
 // Components
 import Login from "./pages/login"
-import Dashboard from "./pages/dashboard"
+import Home from "./pages/home"
 
 class PublicRoute extends React.Component {
   componentDidMount() {}
@@ -19,9 +19,9 @@ class PublicRoute extends React.Component {
 
     return (
       <Router history={history}>
-        <AuthorizedRoute exact path="/home" component={Dashboard} />
+        <AuthorizedRoute exact path="/home" component={Home} />
 
-        <AuthorizedRoute exact path="/" component={Dashboard} />
+        <AuthorizedRoute exact path="/" component={Home} />
         <UnAuthorizedRoute exact path="/login" component={Login} />
       </Router>
     )
