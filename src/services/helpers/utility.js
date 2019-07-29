@@ -6,9 +6,9 @@ export function clearToken() {
 export function getToken() {
   try {
     const accessToken = localStorage.getItem("accessToken")
-    const loggedIn = localStorage.getItem("loggedIn")
+    const isLoggedIn = localStorage.getItem("isLoggedIn")
 
-    return { loggedIn, accessToken }
+    return { isLoggedIn, accessToken }
   } catch (err) {
     clearToken()
     return null

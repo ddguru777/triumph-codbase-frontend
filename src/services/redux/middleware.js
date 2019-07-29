@@ -15,15 +15,17 @@ export function LoginUser(LogInData) {
     await loginAPI(userData.email, userData.password).then(
       response => {
         if (response.data.token) {
+          console.log(response.data)
+
           localStorage.setItem("accessToken", response.data.token)
-          localStorage.setItem("loggedIn", true)
+          localStorage.setItem("isLoggedIn", true)
 
           client.defaults.headers.common = {
             Authorization: `Bearer ${response.data.token}`
           }
         }
 
-        dispatch(authActions.userSignInSuccess(response.data))
+        dispatch(authActions.userSignInSuccess(response.data.account))
         history.push("/home")
       },
       error => {
