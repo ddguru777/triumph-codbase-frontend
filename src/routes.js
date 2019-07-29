@@ -1,47 +1,28 @@
 import React from "react"
-import { Router, Route, Redirect } from "react-router-dom"
+import { Router } from "react-router-dom"
 
 import { connect } from "react-redux"
+
+// Routes Components
+import AuthorizedRoute from "./routes/AuthorizedRoute"
+import UnAuthorizedRoute from "./routes/UnauthorizedRoute"
 
 // Components
 import Auth from "./pages/auth"
 import Dashboard from "./pages/dashboard"
 
-const RestrictedRoute = ({ component: Component, loginCondition, ...rest }) => (
-  <Route
-    {...rest}
-    render={props =>
-      loginCondition ? (
-        <Component {...props} />
-      ) : (
-        <Redirect
-          to={{
-            pathname: "/login",
-            state: { from: props.location }
-          }}
-        />
-      )
-    }
-  />
-)
-
 class PublicRoute extends React.Component {
   componentDidMount() {}
 
   render() {
-    const { history, isLoggedIn } = this.props
+    const { history } = this.props
 
     return (
       <Router history={history}>
-        <RestrictedRoute
-          exact
-          path="/home"
-          component={Dashboard}
-          loginCondition={isLoggedIn}
-        />
+        <AuthorizedRoute exact path="/home" component={Dashboard} />
 
-        <Route exact path="/" component={Auth} />
-        <Route exact path="/login" component={Auth} />
+        <AuthorizedRoute exact path="/" component={Dashboard} />
+        <UnAuthorizedRoute exact path="/login" component={Auth} />
       </Router>
     )
   }

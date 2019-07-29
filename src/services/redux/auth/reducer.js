@@ -5,11 +5,7 @@ import { getToken } from "../../helpers/utility"
 import authActions from "./actions"
 
 const initState = new Map({
-  hasError: false,
-  errorMessage: {},
-  hasLoggedIn: false,
-  hasRegistered: false,
-  isLoggedIn: false,
+  loggedIn: false,
   user: {}
 })
 
@@ -25,7 +21,7 @@ function authReducer(state = initState.merge(getToken()), action) {
     case authActions.SIGN_IN_SUCCESS:
       return Object.assign({}, state, {
         user: action.authUserData,
-        isLoggedIn: true
+        loggedIn: true
       })
 
     case authActions.SIGN_IN_FAILED:
