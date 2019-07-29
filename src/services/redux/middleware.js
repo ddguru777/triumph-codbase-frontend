@@ -18,7 +18,7 @@ export function LoginUser(LogInData) {
           console.log(response.data)
 
           localStorage.setItem("accessToken", response.data.token)
-          localStorage.setItem("isLoggedIn", true)
+          localStorage.setItem("loggedIn", true)
 
           client.defaults.headers.common = {
             Authorization: `Bearer ${response.data.token}`

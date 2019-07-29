@@ -7,10 +7,10 @@ import thunkMiddleware from "redux-thunk"
 import reducers from "./reducers"
 
 const createHistory = require("history").createBrowserHistory
-
 const history = createHistory()
+
 const routeMiddleware = routerMiddleware(history)
-const middlewares = [thunkMiddleware, routeMiddleware]
+const middleware = [thunkMiddleware, routeMiddleware]
 
 const store = createStore(
   combineReducers({
@@ -20,8 +20,8 @@ const store = createStore(
   }),
 
   process.env.NODE_ENV !== "production"
-    ? composeWithDevTools(applyMiddleware(...middlewares))
-    : applyMiddleware(...middlewares)
+    ? composeWithDevTools(applyMiddleware(...middleware))
+    : applyMiddleware(...middleware)
 )
 
 export { store, history }
