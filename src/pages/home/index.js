@@ -2,6 +2,9 @@ import React from "react"
 import { Helmet } from "react-helmet"
 
 import SideNavBar from "../../components/Navbar/SideNavBar"
+import TopBar from "../../components/TopBar"
+
+import Capabilities from "./capabilities"
 
 import styles from "./home.module.scss"
 import classnames from "classnames"
@@ -21,7 +24,14 @@ class Home extends React.Component {
                   <SideNavBar />
                 </div>
                 <div className={styles.content}>
-                  <h1>Page Content</h1>
+                  <div className="row">
+                    <div className="col">
+                      <TopBar />
+                    </div>
+                  </div>
+                  <div className="row">
+                    <div className="col">{/* <Capabilities /> */}</div>
+                  </div>
                 </div>
               </div>
             </div>
