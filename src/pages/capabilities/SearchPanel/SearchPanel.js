@@ -3,7 +3,6 @@ import React from "react"
 import { Button } from "reactstrap"
 
 import styles from "./SearchPanel.module.scss"
-import classnames from "classnames"
 
 class SearchPanel extends React.Component {
   render() {
@@ -12,14 +11,13 @@ class SearchPanel extends React.Component {
         <div className="row">
           <div className="col-sm-4">
             <div className={styles.formGroup}>
-              <label className={styles.controlLabel} for="">
+              <label className={styles.controlLabel} htmlFor="">
                 Aircraft Series
               </label>
               <input
                 type="text"
                 id="aircraft series"
                 name="aircraft serries"
-                value=""
                 placeholder=""
                 className="form-control"
               />
@@ -27,14 +25,13 @@ class SearchPanel extends React.Component {
           </div>
           <div className="col-sm-2">
             <div className={styles.formGroup}>
-              <label className={styles.controlLabel} for="Aircraft Model">
+              <label className={styles.controlLabel} htmlFor="Aircraft Model">
                 Aircraft Model
               </label>
               <input
                 type="text"
                 id="Aircraft Model"
                 name="Aircraft Model"
-                value=""
                 placeholder=""
                 className="form-control"
               />
@@ -51,7 +48,6 @@ class SearchPanel extends React.Component {
                     type="text"
                     id="Add New"
                     name="Add New"
-                    value=""
                     placeholder="Add New"
                     className="form-control"
                   />
@@ -64,9 +60,8 @@ class SearchPanel extends React.Component {
                     type="text"
                     id="Edit"
                     name="Edit"
-                    value=""
                     placeholder="Edit"
-                    class="form-control"
+                    className="form-control"
                   />
                 </div>
               </div>
@@ -76,7 +71,6 @@ class SearchPanel extends React.Component {
                     type="text"
                     id="Save"
                     name="Save"
-                    value=""
                     placeholder="Save"
                     className="form-control"
                   />
@@ -88,50 +82,47 @@ class SearchPanel extends React.Component {
         <div className="row">
           <div className="col-sm-2">
             <div className={styles.formGroup}>
-              <label className={styles.controlLabel} for="Engine">
+              <label className={styles.controlLabel} htmlFor="Engine">
                 Engine
               </label>
               <input
                 type="text"
                 id=""
                 name="Engine"
-                value=""
                 placeholder=""
                 className="form-control"
               />
             </div>
           </div>
-          <div class="col-sm-2">
+          <div className="col-sm-2">
             <div className={styles.formGroup}>
-              <label className={styles.controlLabel} for="ATA">
+              <label className={styles.controlLabel} htmlFor="ATA">
                 ATA
               </label>
               <input
                 type="text"
                 id="ATA"
                 name="ATA"
-                value=""
                 placeholder=""
                 className="form-control"
               />
             </div>
           </div>
-          <div class="col-sm-4">
+          <div className="col-sm-4">
             <div className={styles.formGroup}>
-              <label className={styles.controlLabel} for="Search">
+              <label className={styles.controlLabel} htmlFor="Search">
                 Search
               </label>
               <input
                 type="text"
                 id="Search"
                 name="Search"
-                value=""
                 placeholder="Search for a part, any part"
-                class="form-control"
+                className="form-control"
               />
             </div>
           </div>
-          <div class="col">
+          <div className="col">
             <div className={styles.formGroup}>
               <Button color="primary" className={styles.btnSearch}>
                 Search

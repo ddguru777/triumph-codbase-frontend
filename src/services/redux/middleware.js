@@ -26,7 +26,7 @@ export function LoginUser(LogInData) {
         }
 
         dispatch(authActions.userSignInSuccess(response.data.account))
-        history.push("/home")
+        history.push("/capabilities")
       },
       error => {
         console.log(error)
