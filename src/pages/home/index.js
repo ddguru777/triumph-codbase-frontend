@@ -30,7 +30,9 @@ class Home extends React.Component {
                     </div>
                   </div>
                   <div className="row">
-                    <div className="col">{/* <Capabilities /> */}</div>
+                    <div className="col">
+                      <Capabilities />
+                    </div>
                   </div>
                 </div>
               </div>
