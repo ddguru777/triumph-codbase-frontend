@@ -6,15 +6,15 @@ import { Home } from "../../components/Home"
 import { SearchPanel } from "./SearchPanel"
 import { DataTable } from "../../components/DataTable"
 
-import styles from "./capabilities.module.scss"
+import styles from "./settings.module.scss"
 import classnames from "classnames"
 
-import { capabilitiesData } from "../../sampleData"
+import { settingsData } from "../../sampleData"
 
-class Capabilities extends React.Component {
+class Settings extends React.Component {
   render() {
     return (
-      <Home menu="capabilities">
+      <Home menu="settings">
         <div className="container-fluid">
           <div className="row">
             <div className="col">
@@ -24,11 +24,11 @@ class Capabilities extends React.Component {
             </div>
           </div>
           <SearchPanel />
-          <DataTable data={capabilitiesData} />
+          <DataTable data={settingsData} />
         </div>
       </Home>
     )
   }
 }
 
-export default Capabilities
+export default Settings

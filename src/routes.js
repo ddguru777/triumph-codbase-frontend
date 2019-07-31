@@ -10,6 +10,7 @@ import UnAuthorizedRoute from "./routes/UnauthorizedRoute"
 // Components
 import { Login } from "./pages/login"
 import { Capabilities } from "./pages/capabilities"
+import { Settings } from "./pages/settings"
 
 class PublicRoute extends React.Component {
   componentDidMount() {}
@@ -20,8 +21,9 @@ class PublicRoute extends React.Component {
     return (
       <Router history={history}>
         <AuthorizedRoute exact path="/capabilities" component={Capabilities} />
+        <AuthorizedRoute exact path="/settings" component={Settings} />
 
-        <AuthorizedRoute exact path="/" component={Capabilities} />
+        <AuthorizedRoute exact path="/" component={Settings} />
         <UnAuthorizedRoute exact path="/login" component={Login} />
         <Redirect to="/" />
       </Router>

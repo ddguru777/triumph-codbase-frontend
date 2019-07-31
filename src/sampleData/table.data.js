@@ -46,3 +46,40 @@ export const capabilitiesData = {
     }
   ]
 }
+
+export const settingsData = {
+  columns: [
+    "x",
+    "User Name",
+    "Department",
+    "ID User Updated",
+    "ID User Created",
+    "Last Login"
+  ],
+  rows: [
+    {
+      x: "1",
+      "User Name": "user1@mail.com",
+      Department: "dep No 1",
+      "ID User Updated": "2019-7-31",
+      "ID User Created": "2019-7-31",
+      "Last Login": "2019-7-31"
+    },
+    {
+      x: "2",
+      "User Name": "user2@mail.com",
+      Department: "dep No 2",
+      "ID User Updated": "2019-7-31",
+      "ID User Created": "2019-7-31",
+      "Last Login": "2019-7-31"
+    },
+    {
+      x: "3",
+      "User Name": "user3@mail.com",
+      Department: "dep No 3",
+      "ID User Updated": "2019-7-31",
+      "ID User Created": "2019-7-31",
+      "Last Login": "2019-7-31"
+    }
+  ]
+}

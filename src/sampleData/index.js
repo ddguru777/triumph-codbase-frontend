@@ -1,3 +1,3 @@
-import { capabilitiesData } from "./table.data"
+import { capabilitiesData, settingsData } from "./table.data"
 
-export { capabilitiesData }
+export { capabilitiesData, settingsData }
