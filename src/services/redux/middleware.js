@@ -15,7 +15,7 @@ export function LoginUser(LogInData) {
     await loginAPI(userData.email, userData.password).then(
       response => {
         if (response.data.token) {
-          console.log(response.data)
+          // console.log(response.data)
 
           localStorage.setItem("accessToken", response.data.token)
           localStorage.setItem("loggedIn", true)

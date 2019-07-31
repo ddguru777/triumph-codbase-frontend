@@ -7,7 +7,6 @@ import { SearchPanel } from "./SearchPanel"
 import { DataTable } from "../../components/DataTable"
 
 import styles from "./capabilities.module.scss"
-import classnames from "classnames"
 
 import { capabilitiesData } from "../../sampleData"
 

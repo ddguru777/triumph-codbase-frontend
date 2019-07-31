@@ -23,9 +23,9 @@ class PublicRoute extends React.Component {
         <AuthorizedRoute exact path="/capabilities" component={Capabilities} />
         <AuthorizedRoute exact path="/settings" component={Settings} />
 
-        <AuthorizedRoute exact path="/" component={Settings} />
+        <AuthorizedRoute exact path="/" component={Capabilities} />
         <UnAuthorizedRoute exact path="/login" component={Login} />
-        <Redirect to="/" />
+        {/* <Redirect to="/" /> */}
       </Router>
     )
   }
