@@ -15,7 +15,7 @@ export function LoginUser(LogInData) {
     await loginAPI(userData.email, userData.password).then(
       response => {
         if (response.data.token) {
-          console.log(response.data)
+          // console.log(response.data)
 
           localStorage.setItem("accessToken", response.data.token)
           localStorage.setItem("loggedIn", true)
@@ -26,7 +26,7 @@ export function LoginUser(LogInData) {
         }
 
         dispatch(authActions.userSignInSuccess(response.data.account))
-        history.push("/home")
+        history.push("/capabilities")
       },
       error => {
         console.log(error)

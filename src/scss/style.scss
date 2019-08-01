@@ -10,10 +10,27 @@ h1 {
   font-size: 30px;
 }
 
+.container-flex {
+  display: flex;
+}
+
+/* Custom Button */
+
 /* MARGINS & PADDINGS */
 .m-t-xs {
   margin-top: 5px;
 }
+.m-t-sm {
+  margin-top: 10px;
+}
 .m-t-lg {
   margin-top: 30px;
+}
+
+.pl-0 {
+  padding-left: 0px;
+}
+
+.pr-0 {
+  padding-right: 0px;
 }

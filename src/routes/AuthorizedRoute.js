@@ -10,11 +10,14 @@ class AuthorizedRoute extends React.Component {
       isLoggedIn,
       ...rest
     } = this.props
+
+    console.log(this.props)
+
     return (
       <Route
         {...rest}
         render={props => {
-          return isLoggedIn && currentUser ? (
+          return isLoggedIn ? (
             <Component {...props} {...rest} />
           ) : (
             <Redirect

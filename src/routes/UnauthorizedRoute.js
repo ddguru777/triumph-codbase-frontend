@@ -15,11 +15,7 @@ class UnauthorizedRoute extends React.Component {
       <Route
         {...rest}
         render={props => {
-          return !isLoggedIn || !currentUser ? (
-            <Component {...props} />
-          ) : (
-            <Redirect to="/" />
-          )
+          return !isLoggedIn ? <Component {...props} /> : <Redirect to="/" />
         }}
       />
     )

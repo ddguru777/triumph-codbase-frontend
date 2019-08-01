@@ -1,0 +1,30 @@
+.panelUsername {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  height: 89px;
+
+  .textUsername {
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  height: 46px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgb(167, 177, 194);
+
+  &:hover {
+    background-color: #021457;
+    color: #fff;
+  }
+  &.active {
+    background-color: #021457;
+    color: #fff;
+    border-left: 4px solid #fff;
+  }
+}
