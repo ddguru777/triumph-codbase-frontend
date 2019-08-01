@@ -1,5 +1,5 @@
 import React from "react"
-import { Router, Redirect } from "react-router-dom"
+import { Router, Route, Redirect, Switch } from "react-router-dom"
 
 import { connect } from "react-redux"
 
@@ -7,10 +7,11 @@ import { connect } from "react-redux"
 import AuthorizedRoute from "./routes/AuthorizedRoute"
 import UnAuthorizedRoute from "./routes/UnauthorizedRoute"
 
-// Components
+// Pages
 import { Login } from "./pages/login"
 import { Capabilities } from "./pages/capabilities"
 import { Settings } from "./pages/settings"
+import { Error404 } from "./pages/error/error404"
 
 class PublicRoute extends React.Component {
   componentDidMount() {}
@@ -20,12 +21,19 @@ class PublicRoute extends React.Component {
 
     return (
       <Router history={history}>
-        <AuthorizedRoute exact path="/capabilities" component={Capabilities} />
-        <AuthorizedRoute exact path="/settings" component={Settings} />
+        <Switch>
+          <AuthorizedRoute
+            exact
+            path="/capabilities"
+            component={Capabilities}
+          />
+          <AuthorizedRoute exact path="/settings" component={Settings} />
 
-        <AuthorizedRoute exact path="/" component={Capabilities} />
-        <UnAuthorizedRoute exact path="/login" component={Login} />
-        {/* <Redirect to="/" /> */}
+          <AuthorizedRoute exact path="/" component={Capabilities} />
+          <UnAuthorizedRoute exact path="/login" component={Login} />
+          <Route component={Error404} />
+          {/* <Redirect to="/" /> */}
+        </Switch>
       </Router>
     )
   }
