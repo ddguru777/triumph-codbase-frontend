@@ -2,7 +2,7 @@ import React from "react"
 
 import { Button } from "reactstrap"
 
-import { Home } from "../../components/Home"
+import { Dashboard } from "../../components/Dashboard"
 import { SearchPanel } from "./SearchPanel"
 import { DataTable } from "../../components/DataTable"
 
@@ -13,19 +13,13 @@ import { capabilitiesData } from "../../sampleData"
 class Capabilities extends React.Component {
   render() {
     return (
-      <Home menu="capabilities">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="col">
-              <Button color="primary" className={styles.btnExport}>
-                Export Data
-              </Button>
-            </div>
-          </div>
-          <SearchPanel />
-          <DataTable data={capabilitiesData} />
-        </div>
-      </Home>
+      <Dashboard menu="capabilities">
+        <Button color="primary" className={styles.btnExport}>
+          Export Data
+        </Button>
+        <SearchPanel />
+        <DataTable data={capabilitiesData} />
+      </Dashboard>
     )
   }
 }
