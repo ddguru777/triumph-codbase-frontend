@@ -1,7 +1,7 @@
 import React from "react"
 
 import { SideNavBar } from "../Navbar/SideNavBar"
-import { TopBar } from "../TopBar"
+// import { Logo } from "../Logo"
 
 import "./Dashboard.css"
 import styles from "./Dashboard.module.scss"
@@ -35,11 +35,8 @@ class Dashboard extends React.Component {
               <span className="navbar-toggler-icon"></span>
             </button>
           </nav>
-
           <div className="container-fluid">
-            <div className="row">
-              <div className="col">{this.props.children}</div>
-            </div>
+            {this.props.children}
           </div>
         </div>
       </div>
