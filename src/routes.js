@@ -1,5 +1,5 @@
 import React from "react"
-import { Router, Route, Redirect, Switch } from "react-router-dom"
+import { Router, Route, Switch } from "react-router-dom"
 
 import { connect } from "react-redux"
 
@@ -36,7 +36,6 @@ class PublicRoute extends React.Component {
           <AuthorizedRoute exact path="/" component={Capabilities} />
           <UnAuthorizedRoute exact path="/login" component={Login} />
           <Route component={Error404} />
-          {/* <Redirect to="/" /> */}
         </Switch>
       </Router>
     )
