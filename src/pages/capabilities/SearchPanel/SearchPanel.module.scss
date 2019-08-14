@@ -1,5 +1,7 @@
 .searchPanel {
   margin-top: 10px;
+  border: 1px solid #eee;
+  padding: 10px;
 
   .formGroup {
     margin-bottom: 5px;
@@ -18,6 +20,10 @@
   }
 
   .btnSearch {
-    margin-top: 23px;
+    width: 7em;
+  }
+
+  .btnOther {
+    width: 100%;
   }
 }

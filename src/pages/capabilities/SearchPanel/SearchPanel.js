@@ -1,6 +1,10 @@
 import React from "react"
 
-import { Button } from "reactstrap"
+import { Button, Input } from "reactstrap"
+import {
+  InputGroup,
+  InputGroupAddon
+ } from 'reactstrap';
 
 import styles from "./SearchPanel.module.scss"
 
@@ -14,12 +18,13 @@ class SearchPanel extends React.Component {
               <label className={styles.controlLabel} htmlFor="">
                 Aircraft Series
               </label>
-              <input
+              <Input
                 type="text"
                 id="aircraft series"
                 name="aircraft serries"
                 placeholder=""
                 className="form-control"
+                bsSize="sm"
               />
             </div>
           </div>
@@ -28,12 +33,13 @@ class SearchPanel extends React.Component {
               <label className={styles.controlLabel} htmlFor="Aircraft Model">
                 Aircraft Model
               </label>
-              <input
+              <Input
                 type="text"
                 id="Aircraft Model"
                 name="Aircraft Model"
                 placeholder=""
                 className="form-control"
+                bsSize="sm"
               />
             </div>
           </div>
@@ -44,36 +50,18 @@ class SearchPanel extends React.Component {
             <div className="row m-t-xs">
               <div className="col-sm-4">
                 <div className={styles.formGroup}>
-                  <input
-                    type="text"
-                    id="Add New"
-                    name="Add New"
-                    placeholder="Add New"
-                    className="form-control"
-                  />
+                  <Button className={styles.btnOther} size="sm">Add New</Button>
                 </div>
               </div>
 
               <div className="col-sm-4">
                 <div className={styles.formGroup}>
-                  <input
-                    type="text"
-                    id="Edit"
-                    name="Edit"
-                    placeholder="Edit"
-                    className="form-control"
-                  />
+                  <Button className={styles.btnOther} size="sm">Edit</Button>
                 </div>
               </div>
               <div className="col-sm-4">
                 <div className={styles.formGroup}>
-                  <input
-                    type="text"
-                    id="Save"
-                    name="Save"
-                    placeholder="Save"
-                    className="form-control"
-                  />
+                  <Button className={styles.btnOther} size="sm">Save</Button>
                 </div>
               </div>
             </div>
@@ -85,12 +73,13 @@ class SearchPanel extends React.Component {
               <label className={styles.controlLabel} htmlFor="Engine">
                 Engine
               </label>
-              <input
+              <Input
                 type="text"
                 id=""
                 name="Engine"
                 placeholder=""
                 className="form-control"
+                bsSize="sm"
               />
             </div>
           </div>
@@ -99,34 +88,32 @@ class SearchPanel extends React.Component {
               <label className={styles.controlLabel} htmlFor="ATA">
                 ATA
               </label>
-              <input
+              <Input
                 type="text"
                 id="ATA"
                 name="ATA"
                 placeholder=""
                 className="form-control"
+                bsSize="sm"
               />
             </div>
           </div>
-          <div className="col-sm-4">
+          <div className="col-sm-8">
             <div className={styles.formGroup}>
               <label className={styles.controlLabel} htmlFor="Search">
                 Search
               </label>
-              <input
-                type="text"
-                id="Search"
-                name="Search"
-                placeholder="Search for a part, any part"
-                className="form-control"
-              />
-            </div>
-          </div>
-          <div className="col">
-            <div className={styles.formGroup}>
-              <Button color="primary" className={styles.btnSearch}>
-                Search
-              </Button>
+              <InputGroup size="sm">
+                <Input
+                  id="Search"
+                  name="Search"
+                  placeholder="Search for a part, any part"
+                  className="form-control"
+                />
+                <InputGroupAddon addonType="append">
+                  <Button color="primary" className={ styles.btnSearch }>Search</Button>
+                </InputGroupAddon>
+              </InputGroup>
             </div>
           </div>
         </div>
