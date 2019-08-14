@@ -26,6 +26,8 @@ class SideNavBar extends React.Component {
       <div>
         <Nav vertical>
           <div className={styles.panelUsername}>
+            <img src="https://www.w3schools.com/bootstrap4/newyork.jpg" 
+                className={classnames("img-fluid", "rounded-circle", styles.userPhoto)} alt="" />
             <strong className={styles.textUsername}>user@example.com</strong>
           </div>
           <NavItem>

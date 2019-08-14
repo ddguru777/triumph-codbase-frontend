@@ -1,6 +1,6 @@
 import React from "react"
 
-import styles from "./DataTable.module.scss"
+import "./DataTable.css"
 
 class DataTable extends React.Component {
   render() {
@@ -9,13 +9,11 @@ class DataTable extends React.Component {
     const dataRows = this.props.data.rows
 
     let tableHeaders = (
-      <thead>
-        <tr>
-          {dataColumns.map(function(column, index) {
-            return <th key={index}>{column}</th>
-          })}
-        </tr>
-      </thead>
+      <tr>
+        {dataColumns.map(function(column, index) {
+          return <th key={index}>{column}</th>
+        })}
+      </tr>
     )
 
     var tableBody = dataRows.map(function(row, index) {
@@ -29,10 +27,14 @@ class DataTable extends React.Component {
     })
 
     return (
-      <div className={styles.tablePanel}>
-        <table className="table table-bordered table-hover" width="100%">
-          {tableHeaders}
-          <tbody>{tableBody}</tbody>
+      <div className="table-panel">
+        <table className="table table-bordered table-hover responsive-table">
+          <thead>
+            { tableHeaders }
+          </thead>
+          <tbody>
+            { tableBody }
+          </tbody>
         </table>
       </div>
     )
