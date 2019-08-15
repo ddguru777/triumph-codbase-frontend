@@ -1,6 +1,6 @@
 import React from "react"
 import { connect } from "react-redux"
-import { LoginUser } from "../../../services/redux/middleware"
+import { LoginUser } from "../../../services/redux/auth/middleware"
 
 // Styles
 import { Button, Form, FormGroup, Input } from "reactstrap"

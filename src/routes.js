@@ -12,8 +12,6 @@ import { Login } from "./pages/login"
 import { Capabilities } from "./pages/capabilities"
 import { Settings } from "./pages/settings"
 
-import { Dashboard } from "./components/Dashboard"
-
 import { Error404 } from "./pages/error/error404"
 
 class PublicRoute extends React.Component {
@@ -25,16 +23,14 @@ class PublicRoute extends React.Component {
     return (
       <Router history={history}>
         <Switch>
-          <AuthorizedRoute
+          <Route
             exact
             path="/capabilities"
             component={Capabilities}
           />
-          <AuthorizedRoute exact path="/settings" component={Settings} />
-          <AuthorizedRoute exact path="/home2" component={Dashboard} />
-
-          <AuthorizedRoute exact path="/" component={Capabilities} />
-          <UnAuthorizedRoute exact path="/login" component={Login} />
+          <Route exact path="/settings" component={Settings} />
+          <Route exact path="/" component={Capabilities} />
+          <Route exact path="/login" component={Login} />
           <Route component={Error404} />
         </Switch>
       </Router>

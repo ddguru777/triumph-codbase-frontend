@@ -5,7 +5,7 @@ import { getToken } from "../../helpers/utility"
 import authActions from "./actions"
 
 const initState = new Map({
-  loggedIn: false,
+  loggedIn: true,
   user: {}
 })
 

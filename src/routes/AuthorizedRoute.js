@@ -11,7 +11,7 @@ class AuthorizedRoute extends React.Component {
       ...rest
     } = this.props
 
-    console.log(this.props)
+    // console.log(this.props)
 
     return (
       <Route

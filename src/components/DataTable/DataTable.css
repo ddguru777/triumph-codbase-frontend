@@ -31,9 +31,10 @@
     border-bottom-width: 1px;
     margin-bottom: 0;
   }
-  .responsive-table tr:nth-child(even) {
+  /* .responsive-table tr:nth-child(even) {
     background: #fafafa;
-  }
+    color: #000;
+  } */
 }
 .responsive-table th,
 .responsive-table td {
@@ -74,3 +75,12 @@
   }
 }
 
+.filtered-row {
+  background: #28a745;
+  color: white;
+}
+
+.sel-tr {
+  background: #ff3423 !important;
+  color: white !important;
+}

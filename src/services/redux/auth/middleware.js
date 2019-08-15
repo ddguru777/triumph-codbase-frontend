@@ -1,9 +1,8 @@
-import authActions from "./auth/actions"
-import { history } from "./store"
-import { client } from "../helpers/apiConfig"
-// import { push } from 'react-router-redux';
+import authActions from "./actions"
+import { history } from "../store"
+import { client } from "../../helpers/apiConfig"
 
-import { loginAPI } from "../helpers/api"
+import { loginAPI } from "../../helpers/api"
 
 export function LoginUser(LogInData) {
   return async dispatch => {
